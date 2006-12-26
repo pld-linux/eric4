@@ -1,5 +1,5 @@
 %define		_snap	20061222
-Summary:	Eric4 is a full featured Python IDE
+Summary:	Eric4 - a full featured Python IDE
 Summary(pl):	Eric4 - pe³nowarto¶ciowe IDE dla Pythona
 Name:		eric4
 Version:	4.0
