@@ -1,6 +1,6 @@
 %define		_snap	20061222
 Summary:	Eric4 - a full featured Python IDE
-Summary(pl):	Eric4 - pe≥nowarto∂ciowe IDE dla Pythona
+Summary(pl.UTF-8):   Eric4 - pe≈Çnowarto≈õciowe IDE dla Pythona
 Name:		eric4
 Version:	4.0
 Release:	0.1
@@ -20,20 +20,20 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Eric4 is a full featured Python IDE that is written in PyQt4 using the
 QScintilla editor widget.
 
-%description -l pl
-Eric4 jest pe≥nowarto∂ciowym IDE dla Pythona napisanym w PyQt4 i
-uøywaj±cym edytora QScintilla.
+%description -l pl.UTF-8
+Eric4 jest pe≈Çnowarto≈õciowym IDE dla Pythona napisanym w PyQt4 i
+u≈ºywajƒÖcym edytora QScintilla.
 
 %package doc
 Summary:	Documentation for Eric4
-Summary(pl):	Dodatkowa dokumentacja dla Eric4
+Summary(pl.UTF-8):   Dodatkowa dokumentacja dla Eric4
 Group:		X11/Development/Tools
 Requires:	%{name} = %{version}-%{release}
 
 %description doc
 Documentation for Eric4.
 
-%description doc -l pl
+%description doc -l pl.UTF-8
 Dodatkowa dokumentacja dla Eric4.
 
 %prep
