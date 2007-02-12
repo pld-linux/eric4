@@ -1,6 +1,6 @@
 %define		_snap	20061222
 Summary:	Eric4 - a full featured Python IDE
-Summary(pl.UTF-8):   Eric4 - pełnowartościowe IDE dla Pythona
+Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
 Version:	4.0
 Release:	0.1
@@ -26,7 +26,7 @@ używającym edytora QScintilla.
 
 %package doc
 Summary:	Documentation for Eric4
-Summary(pl.UTF-8):   Dodatkowa dokumentacja dla Eric4
+Summary(pl.UTF-8):	Dodatkowa dokumentacja dla Eric4
 Group:		X11/Development/Tools
 Requires:	%{name} = %{version}-%{release}
 
