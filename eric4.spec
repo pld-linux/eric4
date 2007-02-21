@@ -1,13 +1,13 @@
-%define		_snap	20061222
+%define		_snap	20070218
 Summary:	Eric4 - a full featured Python IDE
 Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
 Version:	4.0
-Release:	0.1
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://www.die-offenbachs.de/detlev/snapshots4/%{name}-snapshot-%{_snap}.tar.gz
-# Source0-md5:	04a4b2a1193427fba18a779c070683ed
+# Source0-md5:	b75f4bd5dd9a1e4015c0b02fbb83237c
 URL:		http://www.die-offenbachs.de/detlev/eric.html
 BuildRequires:	python-qscintilla2-devel
 BuildRequires:	rpm-pythonprov
