@@ -8,7 +8,7 @@ License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://www.die-offenbachs.de/detlev/snapshots4/%{name}-snapshot-%{_snap}.tar.gz
 # Source0-md5:	b75f4bd5dd9a1e4015c0b02fbb83237c
-URL:		http://www.die-offenbachs.de/detlev/eric.html
+URL:		http://www.die-offenbachs.de/eric/index.html
 BuildRequires:	python-qscintilla2-devel
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
