@@ -1,13 +1,13 @@
-%define		_snap	20070218
 Summary:	Eric4 - a full featured Python IDE
 Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
-Version:	4.0
-Release:	0.%{_snap}.1
+Version:	4.0.1
+Release:	1	
 License:	GPL
 Group:		X11/Development/Tools
-Source0:	http://www.die-offenbachs.de/detlev/snapshots4/%{name}-snapshot-%{_snap}.tar.gz
-# Source0-md5:	b75f4bd5dd9a1e4015c0b02fbb83237c
+Source0:	http://dl.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
+# Source0-md5:	bf38d851c86832fa40e07eb75394efc6
+Source1:	%{name}.desktop
 URL:		http://www.die-offenbachs.de/eric/index.html
 BuildRequires:	python-qscintilla2-devel
 BuildRequires:	rpm-pythonprov
@@ -37,12 +37,13 @@ Documentation for Eric4.
 Dodatkowa dokumentacja dla Eric4.
 
 %prep
-%setup -q -n %{name}-snapshot-%{_snap}
+%setup -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 python install.py -c -b %{_bindir} -d %{py_sitedir} -i $RPM_BUILD_ROOT
+install -D eric/pixmaps/eric.png $RPM_BUILD_ROOT%{_pixmapsdir}/eric4.png
 
 %py_comp $RPM_BUILD_ROOT%{py_sitedir}/*
 %py_ocomp $RPM_BUILD_ROOT%{py_sitedir}/*
@@ -59,6 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/eric4config.py
 %{py_sitedir}/%{name}
 %exclude %{py_sitedir}/%{name}/Documentation
+%{_pixmapsdir}/eric4.png
 
 %files doc
 %defattr(644,root,root,755)
