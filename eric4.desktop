@@ -2,10 +2,9 @@
 Name=Eric 4
 Comment=A full featured Python IDE
 Comment[pl]=Pełnowartościowe IDE dla Pythona
-Icon=eric4.png
+Icon=eric4
 Exec=eric4
 Terminal=false
 Type=Application
 Categories=Qt;Development;IDE;
-Encoding=UTF-8
 # vi: encoding=utf-8
