@@ -46,6 +46,7 @@ Dodatkowa dokumentacja dla Eric4.
 rm -rf $RPM_BUILD_ROOT
 
 python install.py -c -b %{_bindir} -d %{py_sitescriptdir} -i $RPM_BUILD_ROOT
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/eric4.desktop
 install -D eric/pixmaps/eric.png $RPM_BUILD_ROOT%{_pixmapsdir}/eric4.png
 
 %py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}/*
@@ -65,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitescriptdir}/%{name}plugins
 %{py_sitescriptdir}/%{name}plugins/*
 %exclude %{py_sitescriptdir}/%{name}/Documentation
+%{_desktopdir}/eric4.desktop
 %{_pixmapsdir}/eric4.png
 
 %files doc
