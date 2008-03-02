@@ -1,19 +1,21 @@
 Summary:	Eric4 - a full featured Python IDE
 Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
-Version:	4.0.4
-Release:	1
+Version:	4.1.1
+Release:	0.1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://dl.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
-# Source0-md5:	1886926945a95c92f2151d5135120c67
+# Source0-md5:	361c01fe5039cf399487df1e0d9fffe5
 Source1:	%{name}.desktop
+Patch0:		%{name}-install.patch
 URL:		http://www.die-offenbachs.de/eric/index.html
 BuildRequires:	python-qscintilla2-devel
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	python-qscintilla2 >= 2.1_1.73-2
 Requires:	python-devel-tools
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,15 +40,16 @@ Dodatkowa dokumentacja dla Eric4.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python install.py -c -b %{_bindir} -d %{py_sitedir} -i $RPM_BUILD_ROOT
+python install.py -c -b %{_bindir} -d %{py_sitescriptdir} -i $RPM_BUILD_ROOT
 install -D eric/pixmaps/eric.png $RPM_BUILD_ROOT%{_pixmapsdir}/eric4.png
 
-%py_comp $RPM_BUILD_ROOT%{py_sitedir}/*
-%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}/*
+%py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}/*
+%py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -57,12 +60,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README* THANKS
 %attr(755,root,root) %{_bindir}/*
-%{py_sitedir}/eric4config.py
-%{py_sitedir}/%{name}
-%exclude %{py_sitedir}/%{name}/Documentation
+%{py_sitescriptdir}/eric4config.py*
+%{py_sitescriptdir}/%{name}
+%dir %{py_sitescriptdir}/%{name}plugins
+%{py_sitescriptdir}/%{name}plugins/*
+%exclude %{py_sitescriptdir}/%{name}/Documentation
 %{_pixmapsdir}/eric4.png
 
 %files doc
 %defattr(644,root,root,755)
-%dir %{py_sitedir}/%{name}/Documentation
-%{py_sitedir}/%{name}/Documentation/Source
+%dir %{py_sitescriptdir}/%{name}/Documentation
+%{py_sitescriptdir}/%{name}/Documentation/Source
