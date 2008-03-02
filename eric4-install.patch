@@ -1,0 +1,11 @@
+--- eric4-4.1.1/install.py.bak	2008-03-01 12:46:17.000000000 +0100
++++ eric4-4.1.1/install.py	2008-03-02 19:46:02.000000000 +0100
+@@ -185,7 +185,7 @@
+     
+     pdir = os.path.join(cfg['mdir'], "eric4plugins")
+     if distDir:
+-        pdir = distDir + pdir
++        pass 
+     fname = os.path.join(pdir, "__init__.py")
+     if not os.path.exists(fname):
+         if not os.path.exists(pdir):
