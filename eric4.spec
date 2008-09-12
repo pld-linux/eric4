@@ -69,6 +69,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/eric4.desktop
 %{_pixmapsdir}/eric4.png
 %{_datadir}/qt4/qsci/api/python/*
+%dir %{_datadir}/qt4/qsci/api/ruby
+%{_datadir}/qt4/qsci/api/ruby/*
 
 %files doc
 %defattr(644,root,root,755)
