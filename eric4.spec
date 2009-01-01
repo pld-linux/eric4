@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
 # Source0-md5:	67cbe7407783066be989abd01c8f195b
 Source1:	%{name}.desktop
 Patch0:		%{name}-distdir.patch
-URL:		http://www.die-offenbachs.de/eric/index.html
+URL:		http://eric-ide.python-projects.org/
 BuildRequires:	python-qscintilla2-devel >= 2.2
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
