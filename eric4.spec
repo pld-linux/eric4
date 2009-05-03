@@ -1,14 +1,13 @@
 Summary:	Eric4 - a full featured Python IDE
 Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
-Version:	4.3.2
+Version:	4.3.3
 Release:	1
 License:	GPL v3+
 Group:		X11/Development/Tools
 Source0:	http://dl.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
-# Source0-md5:	7b62ee59f0a03ae7a400d7e41679d33e
+# Source0-md5:	5668ac515945734e188519a2ac3efcd5
 Source1:	%{name}.desktop
-#Patch0:		%{name}-distdir.patch
 URL:		http://eric-ide.python-projects.org/
 BuildRequires:	python-qscintilla2-devel >= 2.2
 BuildRequires:	rpm-pythonprov
@@ -40,7 +39,6 @@ Dodatkowa dokumentacja dla Eric4.
 
 %prep
 %setup -q
-#%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -51,6 +49,8 @@ install -D eric/pixmaps/eric.png $RPM_BUILD_ROOT%{_pixmapsdir}/eric4.png
 
 %py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}/*
 %py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}/*
+
+rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/%{name}/LICENSE.GPL3
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -68,9 +68,8 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{py_sitescriptdir}/%{name}/Documentation
 %{_desktopdir}/eric4.desktop
 %{_pixmapsdir}/eric4.png
-#%{_datadir}/qt4/qsci/api/python/*
-#%dir %{_datadir}/qt4/qsci/api/ruby
-#%{_datadir}/qt4/qsci/api/ruby/*
+%{_datadir}/qt4/qsci/api/python/*
+%{_datadir}/qt4/qsci/api/ruby
 
 %files doc
 %defattr(644,root,root,755)
