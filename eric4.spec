@@ -9,10 +9,10 @@ Source0:	http://dl.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
 # Source0-md5:	b42dee53f1e23ffe48bf2c21f1dbeeb0
 Source1:	%{name}.desktop
 URL:		http://eric-ide.python-projects.org/
-BuildRequires:	python-qscintilla2-devel >= 2.2
+BuildRequires:	python-qscintilla2-devel >= 2.4
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
-Requires:	python-qscintilla2 >= 2.2
+Requires:	python-qscintilla2 >= 2.4
 Requires:	python-devel-tools
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,7 +43,7 @@ Dodatkowa dokumentacja dla Eric4.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python install.py -c -b %{_bindir} -d %{py_sitescriptdir} -i $RPM_BUILD_ROOT
+python install.py -z -c -b %{_bindir} -d %{py_sitescriptdir} -i $RPM_BUILD_ROOT
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/eric4.desktop
 install -D eric/pixmaps/eric.png $RPM_BUILD_ROOT%{_pixmapsdir}/eric4.png
 
