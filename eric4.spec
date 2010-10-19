@@ -1,12 +1,12 @@
 Summary:	Eric4 - a full featured Python IDE
 Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
-Version:	4.4.8
+Version:	4.4.9
 Release:	1
 License:	GPL v3+
 Group:		X11/Development/Tools
 Source0:	http://downloads.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
-# Source0-md5:	8cf8d2811e5635eaf9520d92be4806cb
+# Source0-md5:	e8c9451850c70f4009785cc0d83adc25
 Source1:	%{name}.desktop
 URL:		http://eric-ide.python-projects.org/
 BuildRequires:	python-qscintilla2-devel >= 2.4.4-3
