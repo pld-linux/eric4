@@ -6,7 +6,7 @@ Release:	1
 License:	GPL v3+
 Group:		X11/Development/Tools
 Source0:	http://downloads.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
-# Source0-md5:	dc8d56fa68c0011633502fdc094fc04e
+# Source0-md5:	9674a7a1750217b488fe0bd556c2cdc4
 Source1:	%{name}.desktop
 URL:		http://eric-ide.python-projects.org/
 BuildRequires:	python-PyQt4-devel-tools
