@@ -1,14 +1,14 @@
 Summary:	Eric4 - a full featured Python IDE
 Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
-Version:	4.4.19
+Version:	4.4.20
 Release:	1
 License:	GPL v3+
 Group:		X11/Development/Tools
 # http://downloads.sourceforge.net/project/eric-ide/eric4/stable/4.4.19/eric4-4.4.19.tar.gz
 # Source0:	http://downloads.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
 Source0:	http://downloads.sourceforge.net/project/eric-ide/%{name}/stable/%{version}/eric4-%{version}.tar.gz
-# Source0-md5:	58ac6cb0f0af79b07f0b95421dc89f53
+# Source0-md5:	2f12f6a55a5cb4ff067e229105c48497
 Source1:	%{name}.desktop
 URL:		http://eric-ide.python-projects.org/
 BuildRequires:	python-PyQt4-devel-tools
