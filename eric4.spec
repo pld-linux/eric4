@@ -1,22 +1,22 @@
 Summary:	Eric4 - a full featured Python IDE
 Summary(pl.UTF-8):	Eric4 - pełnowartościowe IDE dla Pythona
 Name:		eric4
-Version:	4.5.15
+Version:	4.5.18
 Release:	1
 License:	GPL v3+
 Group:		X11/Development/Tools
 # http://downloads.sourceforge.net/project/eric-ide/eric4/stable/4.4.19/eric4-4.4.19.tar.gz
 # Source0:	http://downloads.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
 Source0:	http://downloads.sourceforge.net/eric-ide/%{name}-%{version}.tar.gz
-# Source0-md5:	08bd632779fab09ef247f365fc1ae31c
+# Source0-md5:	c3d9c5313aff2ac41c4b13d3569a92bc
 Source1:	%{name}.desktop
 URL:		http://eric-ide.python-projects.org/
 BuildRequires:	python-PyQt4-devel-tools
 BuildRequires:	python-qscintilla2-devel >= 2.4.4-3
 BuildRequires:	python-sip-devel >= 2:4.5.10
 BuildRequires:	rpm-pythonprov
-%pyrequires_eq	python-modules
 Requires:	python-devel-tools
+Requires:	python-modules
 Requires:	python-modules-sqlite
 Requires:	python-qscintilla2 >= 2.4.4-3
 BuildArch:	noarch
@@ -78,5 +78,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files doc
 %defattr(644,root,root,755)
+# %{py_sitescriptdir}/eric4/Documentation/Help/source.qch
 %dir %{py_sitescriptdir}/%{name}/Documentation
-%{py_sitescriptdir}/%{name}/Documentation/Source
+%{py_sitescriptdir}/%{name}/Documentation/*
+
+
