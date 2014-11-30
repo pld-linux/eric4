@@ -13,6 +13,7 @@ Source1:	%{name}.desktop
 URL:		http://eric-ide.python-projects.org/
 BuildRequires:	python-PyQt4-devel-tools
 BuildRequires:	python-PyQt4
+BuildRequires:	python-PyQt4-qscintilla2 >= 2.4.4-3
 BuildRequires:	python-sip-devel >= 2:4.5.10
 BuildRequires:	rpm-pythonprov
 BuildRequires:	sip-PyQt4
